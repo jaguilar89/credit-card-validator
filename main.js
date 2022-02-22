@@ -22,8 +22,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
-
-// Add your functions below:
+//Credit card number validator function
 function validateCred(array) {
   const isEven = (count) => count % 2 === 0; //checks if value of current 'count' is an even number.
   let newArray = [];
@@ -39,10 +38,8 @@ function validateCred(array) {
       count++
     }
   }
-  console.log(array)
-console.log(newArray)
-console.log(arrayReducer(newArray))
-  //if the sum of newArray modulo 10 is 0, the number is valid, otherwise it's invalid.
+ 
+ //if the sum of newArray modulo 10 is 0, the number is valid, otherwise it's invalid.
   return arrayReducer(newArray) % 10 === 0 ? 'Valid number' : 'Invalid number';
 };
 
@@ -56,7 +53,7 @@ function strToArray(str) { //converts a string containing a number into an array
   return numArray;
 }
 
-function findInvalidCards(nestedArray) {
+function findInvalidCards(nestedArray) { 
   let newArray = [];
   nestedArray.forEach(arr => {
     if (validateCred(arr) === 'Invalid number') {
