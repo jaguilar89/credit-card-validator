@@ -63,6 +63,7 @@ function findInvalidCards(nestedArray) {
   return newArray;
 };
 
+/*
 function invalidToValid(str) {
 	if (validateCredStr(str) === 'Valid number') {
     return 'Number is already valid.'
@@ -76,6 +77,7 @@ function invalidToValid(str) {
     return array
   }
 }
+*/
 
 function idInvalidCardCompanies(nestedArray) { //iterate through nested array of invalid card numbers(return value of findInvalidCards) to return a new array of companies who issued the cards, based on the first digit of the number.
   let newArray = []; //empty array which will hold the names of the companies
